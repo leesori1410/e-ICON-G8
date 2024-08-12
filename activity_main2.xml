@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#561c24"
+        android:gravity="center"
+        android:text="@string/Accounting"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ece3ce"
+        android:padding="20dp">
+
+        <!-- 배경색 위에 올릴 이미지 -->
+        <ImageView
+            android:id="@+id/overlay_image1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:contentDescription="Overlay1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/arrowleft" />
+
+        <ImageView
+            android:id="@+id/overlay_image2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Overlay2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profilepic" />
+
+        <!-- FrameLayout으로 감싸서 LinearLayout을 하단에 배치 -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:paddingTop="0dp">
+
+                <!-- 각 ImageView를 FrameLayout으로 감싸서 중앙 배치 -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"> <!-- 중앙 정렬 -->
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:contentDescription="Image 1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/cpabutton" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"> <!-- 중앙 정렬 -->
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:contentDescription="Image 2"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ciabutton" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"> <!-- 중앙 정렬 -->
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:contentDescription="Image 3"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/cfebutton" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"> <!-- 중앙 정렬 -->
+
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:contentDescription="Image 4"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/cfpbutton" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:background="#561c24"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/menu_icon1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/house"
+            android:tint="@android:color/white"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:contentDescription="House"
+            tools:ignore="UseAppTint"/>
+
+        <ImageView
+            android:id="@+id/menu_icon2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/book"
+            android:tint="@android:color/white"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:contentDescription="Book"
+            tools:ignore="UseAppTint"/>
+
+        <ImageView
+            android:id="@+id/menu_icon3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/person"
+            android:tint="@android:color/white"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:contentDescription="Person"
+            tools:ignore="UseAppTint"/>
+
+        <ImageView
+            android:id="@+id/menu_icon4"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/gear"
+            android:tint="@android:color/white"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:contentDescription="Gear"
+            tools:ignore="UseAppTint"/>
+
+    </LinearLayout>
+</LinearLayout>
